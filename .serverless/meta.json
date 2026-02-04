@@ -1,0 +1,64 @@
+{
+  "C:\\Users\\gabri\\OneDrive\\Desktop\\projetos\\Projeto X\\serverless.yml": {
+    "versionFramework": "4.31.2",
+    "servicePath": "C:\\Users\\gabri\\OneDrive\\Desktop\\projetos\\Projeto X\\serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "smartfetch-ai",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x",
+        "region": "us-east-1",
+        "environment": {
+          "OPENAI_API_KEY": "<REDACTED>"
+        }
+      },
+      "functions": {
+        "api": {
+          "handler": "lambda.handler",
+          "events": [
+            {
+              "httpApi": "*"
+            }
+          ]
+        }
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x",
+      "region": "us-east-1",
+      "environment": {
+        "OPENAI_API_KEY": "<REDACTED>"
+      }
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "error": {
+      "message": "Cannot resolve '${env:OPENAI_API_KEY}' variable at 'provider.environment.OPENAI_API_KEY'. No value is available for this variable, and no default value was provided. Please check your variable definitions or provide a default value.",
+      "stack": "Error: Cannot resolve '${env:OPENAI_API_KEY}' variable at 'provider.environment.OPENAI_API_KEY'. No value is available for this variable, and no default value was provided. Please check your variable definitions or provide a default value.\n    at _ResolverManager.resolve (file:///C:/Users/gabri/.serverless/releases/4.31.2/package/dist/sf-core.js:925:32358)\n    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)\n    at async #handlePlaceholderNode (file:///C:/Users/gabri/.serverless/releases/4.31.2/package/dist/sf-core.js:925:30536)\n    at async file:///C:/Users/gabri/.serverless/releases/4.31.2/package/dist/sf-core.js:925:28380\n    at async processNodeAndHandleCompletion (file:///C:/Users/gabri/.serverless/releases/4.31.2/package/dist/sf-core.js:925:16765)",
+      "code": "MISSING_VARIABLE_RESULT"
+    },
+    "serviceRawFile": "service: smartfetch-ai\r\n\r\nprovider:\r\n  name: aws\r\n  runtime: nodejs18.x\r\n  region: us-east-1\r\n  environment:\r\n    OPENAI_API_KEY: ${env:OPENAI_API_KEY}\r\n\r\nfunctions:\r\n  api:\r\n    handler: lambda.handler\r\n    events:\r\n      - httpApi: \"*\"\r\n",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "orgId": "e659fbcd-6638-482e-ad14-cb5526c96e13",
+    "orgName": "blgroot",
+    "userId": "lTcNDK79v6NmQw1MFC",
+    "userName": "blgroot",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
